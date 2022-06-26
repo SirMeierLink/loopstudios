@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+
+    /* Font family */
+    --alata: 'Alata', sans-serif;
+    --josefin: 'Josefin Sans', sans-serif;
+}
+
+body {
+    font-family: var(--josefin);
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-size: 15px;
+}
+
+.top-image {
+    background-image: url('./images/desktop/image-hero.jpg');
+    background-color: tomato;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 650px;
+    margin-bottom: 100px
+}
+
+.immersive {
+    margin-top: 110px;
+    margin-left: 200px;
+}
+
+.immersive p {
+    font-family: var(--josefin);
+    max-width: 600px;
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid white;
+    padding: 25px;
+}
+
+/* Hamburger menu */
+.nav-links .fa-bars {
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 35px;
+}
+
+.modal-image-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+img[alt=modal-logo] {
+    width: 8rem;
+}
+
+.modal .fa-xmark {
+    font-size: 1.8rem;
+}
+
+.modal .modal-links a {
+    font-family: var(--josefin);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 35px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.leader {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-bottom: 180px;
+    position: relative;
+}
+
+/* Positioning of items */
+
+img[alt="VR head gear"] {
+    width: 85%;
+    height: 100%;
+}
+
+picture {
+    grid-column: 1 / 4;
+    grid-row: 1 / 6;
+    width: 100%;
+}
+
+.leader-text {
+    background-color: #fff;
+    height: 240px;
+    padding: 50px;
+    grid-column: 3 / -1;
+    grid-row: 3 / 6;
+
+}
+
+.leader-text h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.leader-text p {
+    font-family: var(--alata);
+    font-weight: 400;
+    margin: 10px 0px 20px;
+    line-height: 1.5rem;
+    color: var(--dark-gray);
+    letter-spacing: 0.5px;
+}
+
+.our-creations {
+    text-align: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.creations p:nth-of-type(1) {
+    font-size: 2rem;
+    font-weight: 300;
+    align-self: center;
+    text-transform: uppercase;
+    font-family: var(--josefin);
+}
+
+/* Styling button */
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #000;
+    padding: 10px 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.mobile-view-btn {
+    display: none;
+}
+
+.creations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    max-width: 100%;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 100%;
+}
+
+.grid-item {
+    position: relative;
+    width: 100%;
+}
+
+.grid-item img {
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+.grid-item:hover img {
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.grid-item p {
+    text-align: left;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.grid-item:hover p {
+    color: #000;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px;
+    /* padding: 60px 165px; */
+    margin-top: 100px;
+}
+
+img[alt="footer-logo"] {
+    width: 120px;
+}
+
+footer nav {
+    margin-top: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+small {
+    color: var(--dark-gray);
+}
+
+.fa-brands {
+    margin-right: 10px;
+    font-size: 20px;
+    justify-self: flex-end;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+
+    .top-image {
+        background-image: url(./images/mobile/image-hero.jpg);
+        height: 650px;
+    }
+
+    img[alt="VR head gear"] {
+        padding: 50px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    picture {
+        /* max-width: 1900px; */
+        /* height: 100%; */
+        grid-column: 1 ;
+    }
+    
+    .leader-text {
+        grid-column: 1;
+        height: auto;
+    
+    }
+
+    .immersive {
+        max-width: 300px;
+        margin: 190px auto 0;
+    }
+
+    .immersive p {
+        font-size: 2.5rem;
+        color: #fff;
+        text-transform: uppercase;
+        border: 2px solid white;
+        padding: 20px;
+    }
+
+    .leader-text h1 {
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .grid-item p {
+        bottom: 20px;
+        left: 10px;
+        font-family: var(--josefin);
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leader {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .leader-text {
+        position: static;
+        /* height: 0px; */
+    }
+
+    .leader-text p {
+        margin: 10px 0px 20px;
+        line-height: 2rem;
+        color: var(--dark-gray);
+        text-align: center;
+        letter-spacing: 0.5px;
+    }
+
+    .our-creations {
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+    }
+
+    .creations {
+        justify-content: center;
+    }
+    
+    .creations p:nth-of-type(1) {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer nav a {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+    }
+
+    img[alt=logo] {
+        width: 8rem;
+    }
+
+    img[alt="footer-logo"] {
+        width: 10rem;
+        margin-bottom: 25px;
+    }
+
+    .social-icons {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .fa-brands {
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+
+    /* Hiding links to display hamburger menu */
+    .links {
+        display: none;
+    }
+
+    .nav-links .fa-bars {
+        display: inline;
+        font-size: 1.5rem;
+    }
+
+    small {
+        font-size: 0.9rem;
+    }
+
+    .desktop-view-btn {
+        display: none;
+    }
+
+    .mobile-view-btn {
+        display: inline-block;
+        margin: 50px 0;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .immersive {
+        margin: 200px auto 0;
+        width: 600px;
+    }
+}
+
+
+.attribution { display: none; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
